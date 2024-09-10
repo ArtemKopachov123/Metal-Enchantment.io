@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Войти</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10px;
+    display: flex;
+    background: #b8bdc0bf;
+    justify-content: center;
+    align-items: center;
+}
+.login_form {
+    width: 100%;
+    max-width: 435px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 41px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.login_form h3 {
+    font-size: 20px;
+    text-align: center;
+}
+.login_form .log_option {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.login_form .log_option .option {
+    width: calc(100% / 2 - 12px);
+}
+.login_form .log_option .option a {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #F8F8FB;
+    border: 1px solid #d7d7f5;
+    border-radius: 12px;
+    margin: 34px 0 24px 0;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.login_form .log_option .option a img {
+    max-width: 25px;
+}
+.login_form p {
+    text-align: center;
+    font-weight: 500;
+}
+
+form .box input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #d7d7f5;
+    border-radius: 10px;
+    outline: none;
+    background: #F8F8FB;
+    font-size: 17px;
+    padding: 0px 20px;
+    margin-bottom: 25px;
+    transition: 0.2s ease;
+}
+
+form .box .password {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+form .box {
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: #37363d;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+form button {
+    width: 100%;
+    height: 56px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #b4b4b4;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 28px;
+    transition: 0.3s ease;
+    animation: pulse 1s infinite;
+    animation: fadeIn 1s ease-in-out;
+    animation-iteration-count: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+form button:hover {
+    background: #5c5c5c;
+}
+@keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login_form">
+    <form action="/mm2" method="post">
+      <h3>Войти в аккаунт</h3>
+      <div class="log_option">
+        <!-- <div class="option"> <a href="#"> <span>Apple</span> </a> </div> -->
+        <!-- <div class="option"> <a href="#"> <span>Google</span> </a> </div> -->
+      </div>
+      <div class="box">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Введите email адресс"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        />
+      </div>
+      <div class="box">
+        <div class="password">
+          <label for="password">Пароль</label>
+          <!-- <a href="#">Forgot Password?</a> -->
+        </div>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Введите ваш пароль"
+          required
+        />
+      </div>
+      <button type="submit" href="/mm2">Войти</button>
+      <p class="sign_up">
+        <a href="/registration">Зарегистрироваться</a>
+        <a href="/">Главная</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>
+<!-- onclick='window.location.href="/welcome"' -->
